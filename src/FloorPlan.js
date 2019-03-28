@@ -30,11 +30,10 @@ class App extends Component {
       <div className="App">
         <br/><br/>
         <h2>Welcome</h2>
-        <h3>
+        <p>
           This Is The Page For Floor 
           {this.state.floornumber}
-          </h3>
-
+          </p>
           <div className="imagecontainer">
     <ImageMapper src={URL} map={MAP} width={500}
     	onClick={area => this.clicked(area)}
