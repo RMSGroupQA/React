@@ -134,11 +134,12 @@ input{
 
 .inputlarge{
   text-align: center;
+  align-items: righ;
   background-color :#d1d1d1ff;
   color: black;
   border-bottom-width: 5px;
-  width: 50vh;
-  height: 50vh;
+  width: 30vh;
+  height: 20vh;
 }
 
 .logo { grid-area: logo;
@@ -171,14 +172,10 @@ input{
      height: 4vh;
 }
 
-.paddingwhite {
-  background-color:white;
-  color: black;
-}
-
 .paddingtest {
   background-color:rgb(61, 111, 201);
-  padding: 40px;
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
 
 .footer { grid-area: footer;
@@ -191,8 +188,6 @@ input{
   grid-template-areas:
     'padding padding padding padding padding padding padding padding'
     'logo header header header header logout logout logout'
-    'menu main main main main main main main'
-    'menu main main main main main main main'
     'menu main main main main main main main';
 	
   grid-gap: 1px;

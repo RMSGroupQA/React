@@ -38,60 +38,59 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <div className="paddingwhite">
-            <br />
+        <div className="app-header">
+          <br />
+          <div className="bookingtitle">
             Booking Form
-        <br />
-            <div className="paddingtest">
-              <input placeholder="Email" defaultValue={this.state.email}/>
-              <br />
-              <input type={Text} placeholder="Room Name" defaultValue={this.state.roomName} />
-              <br />
-              <input placeholder="Activity Name" />
-              <br />
-              Start Time
-        <br />
-              <DatePicker
-                selected={this.state.startDate}
-                onChange={this.handleChange1}
-                showTimeSelect
-                timeIntervals={15}
-                minDate={new Date()}
-                maxDate={addMonths(this.state.startDate, 2000)}
-                minTime={new Date()}
-                maxTime={setHours(setMinutes(new Date(), 45), 18)}
-                dateFormat="MMMM d, yyyy h:mm aa"
-              />
-              <br />
-              End Time
-        <br />
-              <DatePicker
-
-                placeholderText="test"
-                placeholder="Test"
-                selected={this.state.endDate}
-                onChange={this.handleChange2}
-                showTimeSelect
-                timeIntervals={15}
-                minDate={new Date()}
-                minDate={this.state.startDate}
-                maxDate={addMonths(this.state.startDate, 300)}
-                minTime={this.state.startDate}
-                maxTime={setHours(setMinutes(new Date(), 0), 19)}
-                dateFormat="MMMM d, yyyy h:mm aa"
-                showDisabledMonthNavigation
-              />
-              <br /><br />
-
-              <input type={Text} placeholder="Activity Desc" />
-
-              <br />
-              <button>
-                Book Room
-              </button>
             </div>
-          </div >
+          <br />
+          <div className="paddingtest">
+            <input placeholder="Email" defaultValue={this.state.email} />
+            <br />
+            <input type={Text} placeholder="Room Name" defaultValue={this.state.roomName} />
+            <br />
+            <input placeholder="Activity Name" />
+            <br />
+            Start Time
+        <br />
+            <DatePicker
+              selected={this.state.startDate}
+              onChange={this.handleChange1}
+              showTimeSelect
+              timeIntervals={15}
+              minDate={new Date()}
+              maxDate={addMonths(this.state.startDate, 2000)}
+              minTime={new Date()}
+              maxTime={setHours(setMinutes(new Date(), 45), 18)}
+              dateFormat="MMMM d, yyyy h:mm aa"
+            />
+            <br />
+            End Time
+        <br />
+            <DatePicker
+
+              placeholderText="test"
+              placeholder="Test"
+              selected={this.state.endDate}
+              onChange={this.handleChange2}
+              showTimeSelect
+              timeIntervals={15}
+              minDate={new Date()}
+              minDate={this.state.startDate}
+              maxDate={addMonths(this.state.startDate, 300)}
+              minTime={this.state.startDate}
+              maxTime={setHours(setMinutes(new Date(), 0), 19)}
+              dateFormat="MMMM d, yyyy h:mm aa"
+              showDisabledMonthNavigation
+            />
+            <br/>
+            <br/>
+            <textarea type={Text} className="inputlarge" placeholder="Activity Desc" />
+            <br />
+            <button>
+              Book Room
+            </button>
+          </div>
         </div>
       </div>
     );

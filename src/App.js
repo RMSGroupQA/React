@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedin: '0',
+      loggedin: '1',
     };
 
     this.changeToMain = () => {

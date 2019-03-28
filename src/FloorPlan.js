@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ImageMapper from 'react-image-mapper';
-
+import Floor_5 from "./Floor_5.PNG";
 
 class App extends Component {
 
@@ -18,7 +18,6 @@ class App extends Component {
 }
 
   render() {
-    let URL = "https://i.pinimg.com/originals/69/87/bc/6987bcc2297415a9b10c483c701842b6.jpg"
     let MAP = {
       name: "my-map",
       areas: [
@@ -28,14 +27,11 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <br/><br/>
-        <h2>Welcome</h2>
-        <p>
+        <p>Welcome</p>
           This Is The Page For Floor 
           {this.props.floornumber}
-          </p>
           <div className="imagecontainer">
-    <ImageMapper src={URL} map={MAP} width={500}
+    <ImageMapper src={Floor_5} map={MAP} width={200}
     	onClick={area => this.clicked(area)}
     />
     {

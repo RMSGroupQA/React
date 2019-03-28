@@ -53,7 +53,9 @@ class App extends Component {
         });
       }
       else {
-        
+        this.setState({
+          errormessage: '',
+        });
         axios.post(`52.142.151.160:8081/getters/createUser`, {
           "email": this.state.email,
           "forname": this.state.forname,
