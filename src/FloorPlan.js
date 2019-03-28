@@ -35,7 +35,7 @@ class App extends Component {
           {this.state.floornumber}
           </h3>
 
-          <div className="container">
+          <div className="imagecontainer">
     <ImageMapper src={URL} map={MAP} width={500}
     	onClick={area => this.clicked(area)}
     />
