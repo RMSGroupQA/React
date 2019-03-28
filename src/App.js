@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedin: '1',
+      loggedin: '0',
     };
   }
   
