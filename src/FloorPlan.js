@@ -21,8 +21,8 @@ class App extends Component {
     let MAP = {
       name: "my-map",
       areas: [
-        { name: "Main", shape: "poly", coords: [220,80,220,140,280,140,280,80], preFillColor: "#" , fillColor: "lightblue"  },
-        { name: "Side", shape: "poly", coords: [150,80,150,140,220,140,220,80], preFillColor: "#" , fillColor: "lightblue"  },
+        { name: "Room2", shape: "poly", coords: [220,150,220,10,410,10,410,150], preFillColor: "#" , fillColor: "lightblue"  },
+        { name: "Room1", shape: "poly", coords: [20,10,20,150,220,150,220,10], preFillColor: "#" , fillColor: "lightblue"  },
       ]
     }
     return (
@@ -31,7 +31,7 @@ class App extends Component {
           This Is The Page For Floor 
           {this.props.floornumber}
           <div className="imagecontainer">
-    <ImageMapper src={Floor_5} map={MAP} width={200}
+    <ImageMapper src={Floor_5} map={MAP} width={1000}
     	onClick={area => this.clicked(area)}
     />
     {
