@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      floornumber: ' 4',
+      floornumber: '',
     };
 
   this.clicked = (e) =>
@@ -32,7 +32,7 @@ class App extends Component {
         <h2>Welcome</h2>
         <p>
           This Is The Page For Floor 
-          {this.state.floornumber}
+          {this.props.floornumber}
           </p>
           <div className="imagecontainer">
     <ImageMapper src={URL} map={MAP} width={500}

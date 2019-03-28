@@ -54,8 +54,18 @@ class App extends Component {
       }
       else {
         
-
-      }
+        axios.post(`52.142.151.160:8081/getters/createUser`, {
+          "email": this.state.email,
+          "forname": this.state.forname,
+          "surname": this.state.surname,
+          "password": this.state.password,
+        })
+       .then(response => {
+         console.log(response.data);
+         console.log("Done");
+         alert("Dude Added");
+         });
+       };
     }
 
 

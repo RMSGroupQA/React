@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.loggedin == '1') {
+    if (this.state.loggedin == '0') {
       return (
         <Login />)
     } else {

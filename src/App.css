@@ -146,7 +146,11 @@ input{
 }
 
 .header { grid-area: header;
-     background-color:rgb(61, 111, 201);
+  background-color:rgb(61, 111, 201);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
 }
 
 .menu { grid-area: menu;

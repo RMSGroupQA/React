@@ -34,11 +34,10 @@ class App extends Component {
             <div className="logo">
               <img style={{ width: '80px', height: '80px' }} src={logo_qa} alt="Logo" />
             </div>
+
             <div className="header">
-              <div className="imagecontainer">
               <img style={{ width: '60px', height: '60px'}} src={qa} alt="Logo" />
               Consulting Rooms
-                  </div>
             </div>
 
             <div className="profile">
@@ -56,7 +55,7 @@ class App extends Component {
               <Route exact path="/Home" component={Home} />
               <Route exact path="/CheckRooms" />
               <Route exact path="/Floor4" component={FloorPlan} floornumber='4' />
-              <Route exact path="/Floor5" />
+              <Route exact path="/Floor5" component={FloorPlan} floornumber='5'/>
               <Route exact path="/RoomBooking" component={RoomBooking} />
               <Route exact path={"/" + this.state.forename + this.state.surname + '_account_settings'} forename={this.state.forename} surname={this.state.surname} email={this.state.email} component={AccountSettings} />
             </div>
