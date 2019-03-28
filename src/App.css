@@ -1,0 +1,211 @@
+.App {
+  text-align: center;
+  align-items: center;
+}
+
+.loginButton0
+{
+  background-color:  rgb(91, 155, 213);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2.7vmin);
+  max-width: 30vh;
+  color: white;
+}
+
+.loginButton1
+{
+  background-color: #d86106;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2.7vmin);
+  color: navy;
+  max-width: 30vh;
+}
+
+.login0
+{
+  display: none;
+}
+
+.login1
+{
+  background-color: rgb(91, 155, 213);
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: white;
+  width: 25vh;
+}
+
+.signup0
+{
+  display: none;
+}
+
+.signup1
+{
+  background-color: rgb(91, 155, 213);
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1.5vmin);
+  color: white;
+  width: 25vh;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: navy;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.topnav {
+font-family: Adventure;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(61, 111, 201);
+}
+
+.topnav a 
+{
+  float: left;
+  color: #f2f2f2;
+  background-color: rgb(61, 111, 201);
+  text-align: center;
+  padding: 0px 0px;
+  font-size: 30px;
+  min-width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.topnav a:hover 
+{
+  background-color: rgb(61, 80, 201);
+  color: white;
+  min-width: 100px;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.topnav a.active 
+{
+  float: left;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #d86106;
+  color: black;
+  text-align: center;
+}
+
+input{
+  text-align: center;
+  background-color :#d1d1d1ff;
+  color: black;
+  border-bottom-width: 5px;
+}
+
+.inputlarge{
+  text-align: center;
+  background-color :#d1d1d1ff;
+  color: black;
+  border-bottom-width: 5px;
+  width: 50vh;
+  height: 50vh;
+}
+
+.logo { grid-area: logo;
+     background-color:rgb(61, 111, 201);
+}
+
+.header { grid-area: header;
+     background-color:rgb(61, 111, 201);
+}
+
+.menu { grid-area: menu;
+  background-color: rgb(61, 111, 201);
+  height: 90vh;
+}
+
+.main { grid-area: main;
+  background-color: white;
+}
+
+.profile { grid-area: logout;
+     background-color:rgb(61, 111, 201);
+}
+
+.padding { grid-area: padding;
+     background-color:rgb(61, 111, 201);
+     height: 4vh;
+}
+
+.paddingwhite {
+  background-color:white;
+  color: black;
+}
+
+.paddingtest {
+  background-color:rgb(61, 111, 201);
+  padding: 40px;
+}
+
+.footer { grid-area: footer;
+  background-color:rgb(61, 111, 201);
+  height: 4vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'padding padding padding padding padding padding padding padding'
+    'logo header header header header logout logout logout'
+    'menu main main main main main main main'
+    'menu main main main main main main main'
+    'menu main main main main main main main';
+	
+  grid-gap: 0px;
+  background-color: #282c34;
+  padding: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 0px 0px;
+  font-size: 30px;
+}
+
+.image{
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  color: #fff;
+  padding: 10px;
+  background: rgba(0,0,0,0.8);
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1000;
+}
