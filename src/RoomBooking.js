@@ -45,6 +45,8 @@ class App extends Component {
             <div className="paddingtest">
               <input placeholder="Email" />
               <br />
+              <input placeholder="Room Name" />
+              <br />
               <input placeholder="Activity Name" />
               <br />
               Start Time
