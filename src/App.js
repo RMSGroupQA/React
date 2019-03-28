@@ -12,8 +12,21 @@ class App extends Component {
     this.state = {
       loggedin: '0',
     };
+
+    this.changeToMain = () => {
+      this.state = {
+        loggedin: '0',
+      };
+    }
+
+    this.changeToLoggedOut = () => {
+      this.state = {
+        loggedin: '1',
+      };
+    }
+
   }
-  
+
   render() {
     if (this.state.loggedin == '1') {
       return (

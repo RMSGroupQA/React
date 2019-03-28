@@ -14,13 +14,13 @@ class App extends Component {
       password: '',
       confimPassword: '',
 
-      loginState: 0,
-      signupState: 1,
+      loginState: 1,
+      signupState: 0,
 
       errorMessage: '',
     }
 
-    this.signupvalidate = () => {
+    this.signupValidate = () => {
       console.log(this.state.email);
       if (this.state.email == ''){
         this.setState({
@@ -148,7 +148,7 @@ class App extends Component {
               {this.state.errormessage}
             </div>
             <br/>
-            <button onClick={this.signupvalidate}>
+            <button onClick={this.signupValidate}>
               SignUp
             </button>
             <br/>
