@@ -191,7 +191,7 @@ input{
     'menu main main main main main main main'
     'menu main main main main main main main';
 	
-  grid-gap: 0px;
+  grid-gap: 5px;
   background-color: #282c34;
   padding: 0px;
 }

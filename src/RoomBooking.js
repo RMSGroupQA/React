@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       startDate: new Date(),
       endDate: new Date(),
+      roomName: '',
     };
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
@@ -43,9 +44,9 @@ class App extends Component {
             Booking Form
         <br />
             <div className="paddingtest">
-              <input placeholder="Email" />
+              <input placeholder="Email" defaultValue={this.state.email}/>
               <br />
-              <input placeholder="Room Name" />
+              <input type={Text} placeholder="Room Name" defaultValue={this.state.roomName} />
               <br />
               <input placeholder="Activity Name" />
               <br />
