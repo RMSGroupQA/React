@@ -34,10 +34,9 @@ class App extends Component {
             <div className="logo">
               <img style={{ width: '80px', height: '80px' }} src={logo_qa} alt="Logo" />
             </div>
-
             <div className="header">
-              <div >
-              <img style={{ width: '50px', height: '50px'}} src={qa} alt="Logo" />
+              <div className="imagecontainer">
+              <img style={{ width: '60px', height: '60px'}} src={qa} alt="Logo" />
               Consulting Rooms
                   </div>
             </div>
