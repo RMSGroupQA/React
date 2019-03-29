@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavBar from './NavBar'
-import Login from "./Login"
-import FloorPlan from "./FloorPlan";
+import NavBar from './NavBar';
+import Login from "./Login";
+import FloorPlan5 from "./FloorPlan5";
 
 class App extends Component {
 
@@ -14,7 +14,7 @@ class App extends Component {
 
     this.changeToMain = () => {
       this.setState({
-        loggedin:1,
+        loggedin: 1,
       });
     }
   }
@@ -23,14 +23,14 @@ class App extends Component {
     return (
       <div>
         <div className={"logindis" + this.state.loggedin}>
-		<button onClick={this.changeToMain}>Login</button>
-        <Login/>
+          <button onClick={this.changeToMain}>Login</button>
+          <Login />
         </div>
         <div className={"navBardis" + this.state.loggedin}>
-        <NavBar />
+          <NavBar />
         </div>
-    </div> )
-    }
+      </div>)
   }
+}
 
 export default App;

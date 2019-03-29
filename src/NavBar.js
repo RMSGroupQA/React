@@ -7,7 +7,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import RoomBooking from "./RoomBooking";
 import Home from "./Home";
 import AccountSettings from "./AccountSettings";
-import FloorPlan from "./FloorPlan";
+import FloorPlan5 from "./FloorPlan5";
+import FloorPlan4 from "./FloorPlan4";
 import RoomList from "./RoomList";
 
 class App extends Component {
@@ -56,9 +57,9 @@ class App extends Component {
 
               <div className="main">
                 <Route exact path="/Home" component={Home} />
-                <Route exact path="/RoomsList" component={RoomList}/>
-                <Route exact path="/Floor4" component={FloorPlan} floornumber='4' />
-                <Route exact path="/Floor5" component={FloorPlan} floornumber='5' />
+                <Route exact path="/RoomsList" component={RoomList} />
+                <Route exact path="/Floor4" component={FloorPlan4} floornumber='4' />
+                <Route exact path="/Floor5" component={FloorPlan5} floornumber='5' />
                 <Route exact path="/RoomBooking" component={RoomBooking} />
                 <Route exact path={"/" + this.state.forename + this.state.surname + '_account_settings'} forename={this.state.forename} surname={this.state.surname} email={this.state.email} component={AccountSettings} />
               </div>
@@ -76,11 +77,11 @@ class App extends Component {
                   <h3>
                     <NavLink to="/Floor5">Floor 5</NavLink>
                   </h3>
-                  <br/>
+                  <br />
                   <h3>
                     <NavLink to="/RoomBooking">Room Booking</NavLink>
                   </h3>
-                  <br/>
+                  <br />
                   <h3>
                     <NavLink to="/RoomsList">Room List</NavLink>
                   </h3>
