@@ -11,25 +11,15 @@ class App extends Component {
           LIST OF ALL ROOMS
         </p>
         <p>
-        Floor 4
-        Room 2
-        Number Of Chairs : 20
-        Number Of Computers : 48
+        Floor 4 Room 2 Number Of Chairs : 20 Number Of Computers : 48
         </p>
 
         <p>
-        Floor 5
-        Room M1
-        Number Of Chairs : 31
-        Number Of Computers : 23
+        Floor 5 Room M1 Number Of Chairs : 31 Number Of Computers : 23
         </p>
         <p>
-        Floor 5
-        Room 4
-        Number Of Chairs : 16
-        Number Of Computers : 21
+        Floor 4 Room 4 Number Of Chairs : 16 Number Of Computers : 21
         </p>
-
         <br /><br />
       </div>
     );

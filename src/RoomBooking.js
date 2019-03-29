@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import setMinutes from "date-fns/setMinutes";
 import setHours from "date-fns/setHours";
 import addMonths from "date-fns/setHours";
+import axios from "axios"
 
 
 class App extends Component {
@@ -16,11 +17,22 @@ class App extends Component {
       endDate: new Date(),
       roomName: '',
       email: '',
-      activName:'',
+      activName: 'Example Name',
+      activDesc: 'Example Description',
     };
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
 
+    this.saveBooking = () => {
+      axios.post(`http://52.142.151.160:8081/getters/createBooking`, {
+        "room" : this.props.roomName,
+        "email": this.state.email,
+        "starttime": this.state.startDate,
+        "endtime" :this.state.endDate,
+        "activName" : this.state.activName,
+        "activDesc" : this.state.activDesc,
+      })
+    }
   }
 
   handleChange1(date) {
@@ -52,7 +64,7 @@ class App extends Component {
             <br />
             <input readOnly type={Text} placeholder="Room Name" defaultValue={this.props.roomname} />
             <br />
-            <input id="activName" placeholder="Activity Name"/>
+            <input id="activName" placeholder="Activity Name" />
             <br />
             Start Time
         <br />
@@ -90,7 +102,7 @@ class App extends Component {
             <br />
             <textarea type={Text} className="inputlarge" placeholder="Activity Desc" />
             <br />
-            <button onClick={this.blankForm}>
+            <button onClick={this.saveBooking}>
               Book Room
             </button>
             <br />
