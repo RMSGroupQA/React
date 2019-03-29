@@ -55,10 +55,10 @@ class App extends Component {
         this.setState({
           errormessage: '',
         });
-        axios.post(`localhost:8081/getters/createUser`, {
+        axios.post(`http://localhost:8081/getters/createEmployee`, {
           "email": this.state.email,
-          "forname": this.state.forname,
-          "surname": this.state.surname,
+          "forename": this.state.forname,
+          "lastname": this.state.surname,
           "password": this.state.password,
         })
        .then(response => {
@@ -68,8 +68,6 @@ class App extends Component {
          });
        };
     }
-
-
 
     this.setEmail = (e) => {
       this.setState({
