@@ -11,8 +11,11 @@ class App extends Component {
     this.state = {
       floornumber: '',
 
+
       email:'Example@qa.com',
       roomname: '',
+      activName:'',
+
       roomBookingVis:'0',
     };
 
@@ -67,7 +70,7 @@ class App extends Component {
         <button onClick={this.showMap}>
             Show Map
             </button>
-        <RoomBooking  email={this.state.email} roomname={this.state.roomname}/>
+        <RoomBooking  activName={this.state.activName} email={this.state.email} roomname={this.state.roomname}/>
         </div>
         </div>
     );

@@ -8,6 +8,7 @@ import RoomBooking from "./RoomBooking";
 import Home from "./Home";
 import AccountSettings from "./AccountSettings";
 import FloorPlan from "./FloorPlan";
+import RoomList from "./RoomList";
 
 class App extends Component {
 
@@ -55,7 +56,7 @@ class App extends Component {
 
               <div className="main">
                 <Route exact path="/Home" component={Home} />
-                <Route exact path="/CheckRooms" />
+                <Route exact path="/RoomsList" component={RoomList}/>
                 <Route exact path="/Floor4" component={FloorPlan} floornumber='4' />
                 <Route exact path="/Floor5" component={FloorPlan} floornumber='5' />
                 <Route exact path="/RoomBooking" component={RoomBooking} />
@@ -67,18 +68,22 @@ class App extends Component {
                   <h3>
                     <NavLink to="/Home">Home</NavLink>
                   </h3>
-                  <br/>
+                  <br />
                   <h3>
                     <NavLink to="/Floor4">Floor 4</NavLink>
                   </h3>
-                  <br/>
+                  <br />
                   <h3>
                     <NavLink to="/Floor5">Floor 5</NavLink>
-                  </h3>  
+                  </h3>
                   <br/>
                   <h3>
-                  <NavLink to="/RoomBooking">Room Booking</NavLink>
-                </h3>
+                    <NavLink to="/RoomBooking">Room Booking</NavLink>
+                  </h3>
+                  <br/>
+                  <h3>
+                    <NavLink to="/RoomsList">Room List</NavLink>
+                  </h3>
                 </div>
               </div>
             </div>

@@ -15,10 +15,12 @@ class App extends Component {
       startDate: new Date(),
       endDate: new Date(),
       roomName: '',
-      email:'',
+      email: '',
+      activName:'',
     };
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
+
   }
 
   handleChange1(date) {
@@ -50,7 +52,7 @@ class App extends Component {
             <br />
             <input readOnly type={Text} placeholder="Room Name" defaultValue={this.props.roomname} />
             <br />
-            <input placeholder="Activity Name" />
+            <input id="activName" placeholder="Activity Name"/>
             <br />
             Start Time
         <br />
@@ -84,15 +86,15 @@ class App extends Component {
               dateFormat="MMMM d, yyyy h:mm aa"
               showDisabledMonthNavigation
             />
-            <br/>
-            <br/>
+            <br />
+            <br />
             <textarea type={Text} className="inputlarge" placeholder="Activity Desc" />
             <br />
-            <button>
+            <button onClick={this.blankForm}>
               Book Room
             </button>
-            <br/>
-            <br/>
+            <br />
+            <br />
           </div>
         </div>
       </div>
