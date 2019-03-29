@@ -3,6 +3,21 @@
   align-items: center;
 }
 
+.logindis1 ,.navBardis0,.bookingForm0 ,.floorPlan1{ 
+  display: none;
+}
+
+.bookingForm1
+{
+  text-align: center;
+  align-items: center;
+}
+
+.login1{
+  text-align: center;
+  align-items: center;
+}
+
 .imagecontainer {
   display: flex;
   flex-direction: column;
@@ -84,8 +99,8 @@
 }
 
 .topnav {
-font-family: Adventure;
-  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 1;
   margin: 0px;
   padding: 0px;
   background-color: rgb(61, 111, 201);
@@ -156,11 +171,14 @@ input{
 
 .menu { grid-area: menu;
   background-color: rgb(61, 111, 201);
-  height: 90vh;
+  height: 100%;
+  width: 40vh;
 }
 
 .main { grid-area: main;
   background-color: white;
+  width: 180vh;
+  height: 100vh;
 }
 
 .profile { grid-area: logout;
@@ -190,7 +208,7 @@ input{
     'logo header header header header logout logout logout'
     'menu main main main main main main main';
 	
-  grid-gap: 1px;
+  grid-gap: 0px;
   background-color: #282c34;
   padding: 0px;
 }

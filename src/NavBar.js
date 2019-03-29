@@ -9,7 +9,6 @@ import Home from "./Home";
 import AccountSettings from "./AccountSettings";
 import FloorPlan from "./FloorPlan";
 
-
 class App extends Component {
 
   constructor(props) {
@@ -19,18 +18,15 @@ class App extends Component {
       surname: 'Richards',
       email: 'JohnRichards@qa.com',
     };
-
     this.rmsClick = () => {
-
     }
   }
-
 
   render() {
     return (
       <Router>
         <div className="App">
-          <div>
+          <div >
             <div className="grid-container">
 
               <div className="padding">
@@ -43,18 +39,17 @@ class App extends Component {
               <div className="header">
                 <img style={{ width: '60px', height: '60px' }} src={qa} alt="Logo" />
                 <a href="https://consulting.qa.com">
-                Consulting Rooms
+                  Consulting Rooms
                 </a>
-            </div>
+              </div>
 
               <div className="profile">
-
                 <button>
                   <Link to={this.state.forename + this.state.surname + '_account_settings'}>{this.state.forename} {this.state.surname}
                   </Link>
                 </button>
                 <button>
-                  <NavLink to="/">Logout</NavLink>
+                  <a href="/">Logout</a>
                 </button>
               </div>
 
@@ -69,13 +64,21 @@ class App extends Component {
 
               <div className="menu">
                 <div className="topnav">
-                  <NavLink to="/Home">Home</NavLink>
-                  <br /><br />
-                  <NavLink to="/Floor4">Floor 4</NavLink>
-                  <br /><br />
-                  <NavLink to="/Floor5">Floor 5</NavLink>
-                  <br /><br />
+                  <h3>
+                    <NavLink to="/Home">Home</NavLink>
+                  </h3>
+                  <br/>
+                  <h3>
+                    <NavLink to="/Floor4">Floor 4</NavLink>
+                  </h3>
+                  <br/>
+                  <h3>
+                    <NavLink to="/Floor5">Floor 5</NavLink>
+                  </h3>  
+                  <br/>
+                  <h3>
                   <NavLink to="/RoomBooking">Room Booking</NavLink>
+                </h3>
                 </div>
               </div>
             </div>

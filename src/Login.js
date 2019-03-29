@@ -21,7 +21,6 @@ class App extends Component {
     }
 
     this.signupValidate = () => {
-      console.log(this.state.email);
       if (this.state.email == ''){
         this.setState({
           errormessage: 'Missing Email',
@@ -166,7 +165,6 @@ class App extends Component {
             </button>
             <br/>
           </div>
-
         </header>
       </div>
     );

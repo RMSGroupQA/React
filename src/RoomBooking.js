@@ -15,6 +15,7 @@ class App extends Component {
       startDate: new Date(),
       endDate: new Date(),
       roomName: '',
+      email:'',
     };
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
@@ -45,9 +46,9 @@ class App extends Component {
             </div>
           <br />
           <div className="paddingtest">
-            <input placeholder="Email" defaultValue={this.state.email} />
+            <input readOnly placeholder="Email" defaultValue={this.props.email} />
             <br />
-            <input type={Text} placeholder="Room Name" defaultValue={this.state.roomName} />
+            <input readOnly type={Text} placeholder="Room Name" defaultValue={this.props.roomname} />
             <br />
             <input placeholder="Activity Name" />
             <br />
@@ -90,6 +91,8 @@ class App extends Component {
             <button>
               Book Room
             </button>
+            <br/>
+            <br/>
           </div>
         </div>
       </div>
