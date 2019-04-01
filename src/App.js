@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './NavBar';
 import Login from "./Login";
-import FloorPlan5 from "./FloorPlan5";
+
+
+import HomeTest from "./HomeTest";
 
 class App extends Component {
 

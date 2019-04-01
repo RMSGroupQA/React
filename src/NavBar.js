@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, NavLink, Link } from "react-router-dom"
 import "react-datepicker/dist/react-datepicker.css";
 import RoomBooking from "./RoomBooking";
 import Home from "./Home";
+import ImageMapper from 'react-image-mapper';
 import AccountSettings from "./AccountSettings";
 import FloorPlan5 from "./FloorPlan5";
 import FloorPlan4 from "./FloorPlan4";
@@ -28,21 +29,23 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div >
+          <div className="App-header">
             <div className="grid-container">
 
               <div className="padding">
               </div>
               <br />
               <div className="logo">
-                <img style={{ width: '80px', height: '80px' }} src={logo_qa} alt="Logo" onClick={this.rmsClick} />
+                <img style={{ width: '80px', height: '80px' }} src={logo_qa} onClick={this.rmsClick} />
               </div>
 
               <div className="header">
-                <img style={{ width: '60px', height: '60px' }} src={qa} alt="Logo" />
-                <a href="https://consulting.qa.com">
+                <img style={{ width: '90px', height: '90px' }} src={qa} />
+                <Link to="/Home">
+                <h1>
                   Consulting Rooms
-                </a>
+                  </h1>
+                </Link>
               </div>
 
               <div className="profile">
@@ -51,7 +54,7 @@ class App extends Component {
                   </Link>
                 </button>
                 <button>
-                  <a href="/">Logout</a>
+                  <a href="/Home">Logout</a>
                 </button>
               </div>
 
@@ -60,7 +63,6 @@ class App extends Component {
                 <Route exact path="/RoomsList" component={RoomList} />
                 <Route exact path="/Floor4" component={FloorPlan4} floornumber='4' />
                 <Route exact path="/Floor5" component={FloorPlan5} floornumber='5' />
-                <Route exact path="/RoomBooking" component={RoomBooking} />
                 <Route exact path={"/" + this.state.forename + this.state.surname + '_account_settings'} forename={this.state.forename} surname={this.state.surname} email={this.state.email} component={AccountSettings} />
               </div>
 
@@ -69,19 +71,18 @@ class App extends Component {
                   <h3>
                     <NavLink to="/Home">Home</NavLink>
                   </h3>
-                  <br />
+                  <br/>
+                  <br/>
                   <h3>
                     <NavLink to="/Floor4">Floor 4</NavLink>
                   </h3>
                   <br />
+                  <br/>
                   <h3>
                     <NavLink to="/Floor5">Floor 5</NavLink>
                   </h3>
-                  <br />
-                  <h3>
-                    <NavLink to="/RoomBooking">Room Booking</NavLink>
-                  </h3>
-                  <br />
+                  <br/>
+                  <br/>
                   <h3>
                     <NavLink to="/RoomsList">Room List</NavLink>
                   </h3>

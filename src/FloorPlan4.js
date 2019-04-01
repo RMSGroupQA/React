@@ -11,9 +11,13 @@ class App extends Component {
     this.state = {
       floornumber: '',
 
+      infosize: '0',
 
       email: 'Example@qa.com',
       roomname: '',
+      numberOfSeats: '',
+      numberOfComputer: '',
+
       activName: '',
 
       roomBookingVis: '0',
@@ -21,8 +25,22 @@ class App extends Component {
 
     this.clicked = (e) => {
       this.setState({
-        roomname: e.name,
         roomBookingVis: '1',
+      });
+    }
+
+    this.enterArea = (e) => {
+      this.setState({
+        roomname: e.name,
+        numberOfSeats: e.seatcount,
+        numberOfComputer: e.computers,
+        infosize: 250,
+      });
+    }
+
+    this.leaveArea = (e) => {
+      this.setState({
+        infosize: 0,
       });
     }
 
@@ -37,10 +55,10 @@ class App extends Component {
     let MAP = {
       name: "my-map",
       areas: [
-        { name: "Floor 4 Room 2", shape: "poly", coords: [60, 130, 60, 10, 610, 10, 610, 130], preFillColor: "#", fillColor: "lightblue" },
-        { name: "Floor 4 Room 5", shape: "poly", coords: [730, 330, 730, 180, 980, 180, 980, 330], preFillColor: "#", fillColor: "lightblue" },
-        { name: "Floor 4 Room 6", shape: "poly", coords: [610, 130, 610, 10, 700, 10, 700, 130], preFillColor: "#", fillColor: "lightblue" },
-        { name: "Floor 4 Room 7", shape: "poly", coords: [700, 130, 700, 10, 980, 10, 980, 130], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 43, seatcount: 8, name: "Floor 4 Room 8", shape: "poly", coords: [60, 130, 60, 10, 610, 10, 610, 130], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 61, seatcount: 432, name: "Floor 4 Room 5", shape: "poly", coords: [730, 330, 730, 180, 980, 180, 980, 330], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 23, seatcount: 5, name: "Floor 4 Room 7", shape: "poly", coords: [610, 130, 610, 10, 700, 10, 700, 130], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 3, seatcount: 1, name: "Floor 4 Room 6", shape: "poly", coords: [700, 130, 700, 10, 980, 10, 980, 130], preFillColor: "#", fillColor: "lightblue" },
       ]
     }
     return (
@@ -53,6 +71,8 @@ class App extends Component {
           <div className="imagecontainer">
             <ImageMapper src={Floor_4} map={MAP} width={1000}
               onClick={area => this.clicked(area)}
+              onMouseEnter={area => this.enterArea(area)}
+              onMouseLeave={area => this.leaveArea(area)}
             />
             {
               this.state.hoveredArea &&
@@ -63,6 +83,17 @@ class App extends Component {
             }
           </div>
         </div>
+
+        <div className={"info" + this.state.infosize} style={{ width: this.state.infosize }}>
+          Extra Info
+<br />
+          {this.state.roomname}
+          <br />
+          Seats : {this.state.numberOfSeats}
+          <br />
+          Computers : {this.state.numberOfComputer}
+        </div>
+
         <div className={"bookingForm" + this.state.roomBookingVis}>
           <button onClick={this.showMap}>
             Show Map

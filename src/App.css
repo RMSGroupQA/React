@@ -3,8 +3,15 @@
   align-items: center;
 }
 
-.logindis1 ,.navBardis0,.bookingForm0 ,.floorPlan1{ 
+.logindis1 ,.navBardis0,.bookingForm0 ,.floorPlan1 ,.info0 ,.accountState0,
+.bookingState0 ,.vis0{ 
   display: none;
+}
+
+.info250{
+  margin-top: 50px;
+  margin-left: 50px;
+  background-color: #61dafb;
 }
 
 .bookingForm1
@@ -25,7 +32,7 @@
   justify-content: top;
 }
 
-.loginButton0
+.loginButton0 ,.swapButton0
 {
   background-color:  rgb(91, 155, 213);
   flex-direction: column;
@@ -36,7 +43,7 @@
   color: white;
 }
 
-.loginButton1
+.loginButton1 ,.swapButton1
 {
   background-color: #d86106;
   flex-direction: column;
@@ -47,13 +54,27 @@
   max-width: 30vh;
 }
 
-.login0
+.login0 ,.signup0
 {
   display: none;
 }
 
-.login1
-{
+.vis1{
+  text-align: center;
+  background-color: rgb(91, 155, 213);
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: white;
+  width: 40vh;
+}
+
+.login1 ,.signup1
+{ 
+  text-align: center;
   background-color: rgb(91, 155, 213);
   min-height: 30vh;
   display: flex;
@@ -65,23 +86,6 @@
   width: 25vh;
 }
 
-.signup0
-{
-  display: none;
-}
-
-.signup1
-{
-  background-color: rgb(91, 155, 213);
-  min-height: 30vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 1.5vmin);
-  color: white;
-  width: 25vh;
-}
 
 .App-header {
   background-color: white;
@@ -163,21 +167,22 @@ input{
 
 .header { grid-area: header;
   background-color:rgb(61, 111, 201);
-  flex-direction: column;
-  align-items: center;
-  justify-content: top;
+  margin-left: 300px;
+  display: flex;
+    justify-content: space-between; 
+  align-items: left;
+  justify-content: left;
 }
 
 .menu { grid-area: menu;
   background-color: rgb(61, 111, 201);
-  height: 100%;
-  width: 40vh;
+  min-width: 10vh;
 }
 
 .main { grid-area: main;
   background-color: white;
-  width: 180vh;
-  height: 100vh;
+  min-width: 150vh;
+  min-height: 70vh;
 }
 
 .profile { grid-area: logout;
@@ -195,11 +200,6 @@ input{
   margin-right: 20vh;
 }
 
-.footer { grid-area: footer;
-  background-color:rgb(61, 111, 201);
-  height: 4vh;
-}
-
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -207,28 +207,13 @@ input{
     'logo header header header header logout logout logout'
     'menu main main main main main main main';
 	
-  grid-gap: 0px;
-  background-color: #282c34;
+  grid-gap: 5px;
+  background-color: rgb(61, 111, 201);
   padding: 0px;
 }
 
 .grid-container > div {
   text-align: center;
   padding: 0px 0px;
-  font-size: 30px;
-}
-
-.image{
-  position: relative;
-}
-
-.tooltip {
-  position: absolute;
-  color: #fff;
-  padding: 10px;
-  background: rgba(0,0,0,0.8);
-  transform: translate3d(-50%, -50%, 0);
-  border-radius: 5px;
-  pointer-events: none;
-  z-index: 1000;
+  font-size: 20px;
 }

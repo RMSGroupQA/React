@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ImageMapper from 'react-image-mapper';
+import HomeTest from "./HomeTest";
 
 class App extends Component {
 
