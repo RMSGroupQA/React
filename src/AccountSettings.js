@@ -30,34 +30,34 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <div className="App-header">
-            <div>
+        <div className="App-header">
+          <div>
             <br />
             <button className={'swapButton' + this.state.accountState} onClick={this.accountPage}>
               Account Info
           </button>
             <button className={'swapButton' + this.state.bookingState} onClick={this.bookingPage}>
-              Bookings 
+              Bookings
           </button>
           </div>
 
           <div className={"vis" + this.state.accountState}>
-          Account Info
-          <br/>
-          Email : 
-          <br/>
-          Forename : 
-          <br/>
-          Surname : 
-          <br/>
-          Password : 
+            Account Info
+          <br />
+            Email : Example@qa.com
+          <br />
+            Forename : Example
+          <br />
+            Surname : Example
+          <br />
+            Password : *******
           </div>
 
           <div className={"vis" + this.state.bookingState}>
-           Booking Info
+            Booking Info
           </div>
-          </div>
-          </div>
+        </div>
+      </div>
     );
   }
 }

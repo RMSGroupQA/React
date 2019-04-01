@@ -12,6 +12,8 @@
   margin-top: 50px;
   margin-left: 50px;
   background-color: #61dafb;
+  border: #d86106;
+  border-style: ridge;
 }
 
 .bookingForm1
@@ -45,6 +47,8 @@
 
 .loginButton1 ,.swapButton1
 {
+  border: black;
+  border-style: ridge;
   background-color: #d86106;
   flex-direction: column;
   align-items: center;
