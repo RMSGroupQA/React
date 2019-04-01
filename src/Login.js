@@ -134,7 +134,7 @@ class App extends Component {
             Email
             <input />
             Password
-            <input />
+            <input type="password"/>
             <br />
             <button onClick={this.loginvalidate}>
               Login

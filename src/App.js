@@ -4,8 +4,6 @@ import NavBar from './NavBar';
 import Login from "./Login";
 
 
-import HomeTest from "./HomeTest";
-
 class App extends Component {
 
   constructor(props) {

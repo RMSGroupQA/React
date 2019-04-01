@@ -34,6 +34,11 @@
   justify-content: top;
 }
 
+.content-expanded {
+  height: 10vh;
+  overflow: hidden;
+}
+
 .loginButton0 ,.swapButton0
 {
   background-color:  rgb(91, 155, 213);
@@ -173,9 +178,20 @@ input{
   background-color:rgb(61, 111, 201);
   margin-left: 300px;
   display: flex;
-    justify-content: space-between; 
+  justify-content: space-between; 
   align-items: left;
   justify-content: left;
+}
+
+.calander {
+  background-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agenda{
+  width: 800px;
 }
 
 .menu { grid-area: menu;
@@ -186,6 +202,7 @@ input{
 .main { grid-area: main;
   background-color: white;
   min-width: 150vh;
+  max-width: 20vh;
   min-height: 70vh;
 }
 

@@ -55,10 +55,10 @@ class App extends Component {
     let MAP = {
       name: "my-map",
       areas: [
-        { computers: 43, seatcount: 8, name: "Floor 4 Room 8", shape: "poly", coords: [60, 130, 60, 10, 610, 10, 610, 130], preFillColor: "#", fillColor: "lightblue" },
-        { computers: 61, seatcount: 432, name: "Floor 4 Room 5", shape: "poly", coords: [730, 330, 730, 180, 980, 180, 980, 330], preFillColor: "#", fillColor: "lightblue" },
-        { computers: 23, seatcount: 5, name: "Floor 4 Room 7", shape: "poly", coords: [610, 130, 610, 10, 700, 10, 700, 130], preFillColor: "#", fillColor: "lightblue" },
-        { computers: 3, seatcount: 1, name: "Floor 4 Room 6", shape: "poly", coords: [700, 130, 700, 10, 980, 10, 980, 130], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 20, seatcount: 52, name: "Floor 4 Room 8", shape: "poly", coords: [60, 130, 60, 10, 610, 10, 610, 130], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 30, seatcount: 35, name: "Floor 4 Room 5", shape: "poly", coords: [730, 330, 730, 180, 980, 180, 980, 330], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 0, seatcount: 10, name: "Floor 4 Consultant Hub", shape: "poly", coords: [610, 130, 610, 10, 700, 10, 700, 130], preFillColor: "#", fillColor: "lightblue" },
+        { computers: 52, seatcount: 48, name: "Floor 4 Room 6", shape: "poly", coords: [700, 130, 700, 10, 980, 10, 980, 130], preFillColor: "#", fillColor: "lightblue" },
       ]
     }
     return (
