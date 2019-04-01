@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, NavLink, Link } from "react-router-dom"
 import "react-datepicker/dist/react-datepicker.css";
 import RoomBooking from "./RoomBooking";
 import Home from "./Home";
-import ImageMapper from 'react-image-mapper';
 import AccountSettings from "./AccountSettings";
 import FloorPlan5 from "./FloorPlan5";
 import FloorPlan4 from "./FloorPlan4";

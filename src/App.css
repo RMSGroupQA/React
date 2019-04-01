@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2.7vmin);
-  max-width: 30vh;
+  width: 25vh;
   color: white;
 }
 
@@ -60,7 +60,8 @@
   justify-content: center;
   font-size: calc(10px + 2.7vmin);
   color: navy;
-  max-width: 30vh;
+  width: 25vh;
+  max-width: 40vh;
 }
 
 .login0 ,.signup0
@@ -78,7 +79,7 @@
   justify-content: center;
   font-size: calc(10px + 3vmin);
   color: white;
-  width: 40vh;
+  width: 50vh;
 }
 
 .login1 ,.signup1
@@ -92,9 +93,12 @@
   justify-content: center;
   font-size: calc(10px + 3vmin);
   color: white;
-  width: 25vh;
+  width: 50vh;
 }
 
+h1{
+  color: black;
+}
 
 .App-header {
   background-color: white;
@@ -108,7 +112,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: black;
 }
 
 .topnav {
@@ -158,6 +162,14 @@ input{
   background-color :#d1d1d1ff;
   color: black;
   border-bottom-width: 5px;
+  width: 40vh;
+}
+
+.buttonlargecontainer{
+  width: 100%;
+}
+.buttonlarge{
+  width: 30%;
 }
 
 .inputlarge{
@@ -179,8 +191,8 @@ input{
   margin-left: 300px;
   display: flex;
   justify-content: space-between; 
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
 }
 
 .calander {

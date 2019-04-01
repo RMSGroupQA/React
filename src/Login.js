@@ -157,7 +157,6 @@ class App extends Component {
             <div className="invalid">
               {this.state.errormessage}
             </div>
-            <br/>
             <button onClick={this.signupValidate}>
               SignUp
             </button>
