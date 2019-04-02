@@ -16,6 +16,7 @@ class App extends Component {
       loggedin: '0',
 
       email: '',
+      emaillogin: '',
       forname: '',
       surname: '',
       password: '',
@@ -62,16 +63,18 @@ class App extends Component {
         this.setState({
           errormessage: '',
         });
-        axios.post(`http://52.142.151.160:8081/getters/createEmployee`, {
+        axios.post(`http://localhost:8081/getters/createEmployee`, {
           "email": this.state.email,
           "forename": this.state.forname,
           "lastname": this.state.surname,
           "password": this.state.password,
         })
           .then(response => {
+          this.setState({
+              errormessage: response.data,
+          });
             console.log(response.data);
             console.log("Done");
-            alert("Dude Added");
           });
       };
     }
@@ -79,6 +82,12 @@ class App extends Component {
     this.setEmail = (e) => {
       this.setState({
         email: e.target.value
+      });
+    }
+
+    this.setloginEmail = (e) => {
+      this.setState({
+        emaillogin: e.target.value
       });
     }
 
@@ -126,7 +135,7 @@ class App extends Component {
         loggedin: '1',
       });
     }
-    }
+  }
 
     this.signupPage = () => {
       console.log("signuppage");
@@ -152,11 +161,10 @@ class App extends Component {
                   SignUp
           </button>
               </div>
-
               <div className={"login" + this.state.loginState}>
                 <br />
                 Email
-            <input />
+            <input onChange={this.setloginEmail} />
                 Password
             <input type="password" />
                 <br />

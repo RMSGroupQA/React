@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'react-calendar-timeline/lib/Timeline.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

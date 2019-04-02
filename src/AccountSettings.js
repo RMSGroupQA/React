@@ -30,10 +30,13 @@ class App extends Component {
         document.getElementById('testid').innerHTML = wordnice;
       });
     }
+
+    this.accountPage = () => {
     this.setState({
       accountState: 1,
       bookingState: 0,
     });
+  }
 
     this.bookingPage = () => {
       this.setState({
