@@ -30,19 +30,19 @@ class App extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="App">
         <br /><br />
+        <button onClick={this.getall}>
+          Show All Rooms
+          </button>
 <div>
   
   </div>
 <div id="testid">
   </div>
-        <p>
-          LIST OF ALL ROOMS
-        </p>
+  <br/>
         <p>
           Floor 4 Room 2 Number Of Chairs : 20 Number Of Computers : 48
         </p>

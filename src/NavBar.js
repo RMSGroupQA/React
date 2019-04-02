@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="App-header">
+          <div >
             <div className="grid-container">
 
               <div className="padding">

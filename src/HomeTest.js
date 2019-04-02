@@ -1,8 +1,6 @@
 import React from 'react';
 import { ReactAgenda, ReactAgendaCtrl, guid, Modal } from 'react-agenda';
-
 import 'react-agenda/build/styles.css';
-
 
 var colors = {
   'color-1': "rgb(91, 155, 213 , 1)",
@@ -10,46 +8,10 @@ var colors = {
   "color-3": "rgba(235, 85, 59, 0.5)"
 }
 
-
 var now = new Date();
 
 
 var items = [
-  {
-    _id: 3,
-    name: 'Office Open',
-    startDateTime: new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0),
-    endDateTime: new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 0),
-    classes: 'color-1'
-  },
-  {
-    _id: 4,
-    name: 'JoshBooking',
-    startDateTime: new Date("Mon Apr 01 2019 12:45:00"),
-    endDateTime: new Date("Mon Apr 01 2019 15:45:00"),
-    classes: 'color-1'
-  },
-  {
-    _id: 5,
-    name: 'Bruno Booking',
-    startDateTime: new Date("Mon Apr 01 2019 12:00:00"),
-    endDateTime: new Date("Mon Apr 01 2019 12:30:00"),
-    classes: 'color-1'
-  },
-  {
-    _id: 6,
-    name: 'Office Closed',
-    startDateTime: new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0),
-    endDateTime: new Date(now.getFullYear(), now.getMonth(), now.getDate(), 19, 0),
-    classes: 'color-1'
-  },
-  {
-    _id: 'event-4',
-    name: 'Working lunch , Holly',
-    startDateTime: new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 11, 0),
-    endDateTime: new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 13, 0),
-    classes: 'color-2 color-3'
-  },
 ];
 
 export default class Agenda extends React.Component {
