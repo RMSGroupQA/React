@@ -14,7 +14,7 @@ class App extends Component {
 
 
     this.accountPage = () => {
-      axios.get('http://52.142.151.160:8001/getters/readEmployee' + this.props.email).then(response => {
+      axios.get('http://51.141.6.150/gateway/readEmployee' + this.props.email).then(response => {
         console.log(response.data);
         this.setState({
           data: response.data
