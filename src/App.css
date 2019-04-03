@@ -225,13 +225,6 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
-
-
-}
-
-.react-calendar-timeline{
-    min-width: 30vw;
-    
 }
 
 .agenda{
@@ -240,13 +233,13 @@ input{
 
 .menu { grid-area: menu;
   background-color: rgb(61, 111, 201);
-  min-width: 120px;
+  min-width: 10vh;
 }
 
 .main { grid-area: main;
   background-color: white;
-  min-width: 80vw;
-
+  min-width: 150vh;
+  max-width: 200vh;
   min-height: 70vh;
 }
 

@@ -16,8 +16,7 @@ class App extends Component {
       loggedin: '0',
 
       email: '',
-      emaillogin: '',
-      forename: '',
+      forname: '',
       surname: '',
       password: '',
       confimPassword: '',
@@ -39,9 +38,9 @@ class App extends Component {
           errormessage: 'Email Needs To End In .com',
         });
       }
-      else if (validator.isAlpha(this.state.forename) == false) {
+      else if (validator.isAlpha(this.state.forname) == false) {
         this.setState({
-          errormessage: 'Invalid forename',
+          errormessage: 'Invalid Forname',
         });
       }
       else if (validator.isAlpha(this.state.surname) == false) {
@@ -63,22 +62,16 @@ class App extends Component {
         this.setState({
           errormessage: '',
         });
-        axios.post(`http://localhost:8081/getters/createEmployee`, {
+        axios.post(`http://52.142.151.160:8081/getters/createEmployee`, {
           "email": this.state.email,
-          "forename": this.state.forename,
+          "forename": this.state.forname,
           "lastname": this.state.surname,
           "password": this.state.password,
         })
           .then(response => {
-            this.setState({
-              errormessage: response.data,
-            });
             console.log(response.data);
-            console.log(this.state.forename + ' ' + this.state.surname + ", you now have an account.")
-            if (response.data == this.state.forename + ' ' + this.state.surname + ", you now have an account.") {
-              window.history.go(0);
-              console.log("LOGG IN")
-            }
+            console.log("Done");
+            alert("Dude Added");
           });
       };
     }
@@ -89,15 +82,9 @@ class App extends Component {
       });
     }
 
-    this.setloginEmail = (e) => {
+    this.setForname = (e) => {
       this.setState({
-        emaillogin: e.target.value
-      });
-    }
-
-    this.setforename = (e) => {
-      this.setState({
-        forename: e.target.value
+        forname: e.target.value
       });
     }
     this.setSurname = (e) => {
@@ -127,30 +114,18 @@ class App extends Component {
     }
 
     this.changeToMain = () => {
-      axios.get(`http://localhost:8081/getters/readEmployee/${this.state.emaillogin}`).then(response => {
+      axios.get('http://52.142.151.160:8001/getters/readEmployee' + this.state.email).then(response => {
         console.log(response.data);
         this.setState({
           data: response.data
         });
-
-        let wordnice = JSON.stringify(response.data);
-        wordnice = wordnice.replace('[', " ");
-        wordnice = wordnice.replace(']', " ");
-        wordnice = wordnice.replace(/\=/g, " : ");
-        wordnice = wordnice.replace(/\"/g, " ");
-        wordnice = wordnice.replace(/\,/g, "\n");
-        wordnice = wordnice.replace(/,/g, "<br/>");
-
-        this.setState({
-          data: response.data,
-        });
-        if (response.data != "No such employee.") {
-          this.setState({
-            data: wordnice + ".com",
-            loggedin: '1',
-          });
-        }
       });
+      if (this.state.data != "No such employee.")
+      {
+      this.setState({
+        loggedin: '1',
+      });
+    }
     }
 
     this.signupPage = () => {
@@ -161,7 +136,6 @@ class App extends Component {
       });
     }
   }
-
 
   render() {
     return (
@@ -178,28 +152,25 @@ class App extends Component {
                   SignUp
           </button>
               </div>
+
               <div className={"login" + this.state.loginState}>
                 <br />
                 Email
-            <input onChange={this.setloginEmail} />
+            <input />
                 Password
             <input type="password" />
                 <br />
                 <button onClick={this.changeToMain}>
                   Login
-                  <br />
-                </button>
-                <br />
-                {this.state.data}
-                <br />
+            </button>
                 <br />
               </div>
 
               <div className={"signup" + this.state.signupState}>
                 Email
-            <input id="email" onChange={this.setEmail} placeholder="example@example.qa.com" />
+            <input onChange={this.setEmail} placeholder="example@example.qa.com" />
                 Forename
-            <input onChange={this.setforename} />
+            <input onChange={this.setForname} />
                 Surname
             <input onChange={this.setSurname} />
                 Password
@@ -219,7 +190,7 @@ class App extends Component {
           </div>
         </div>
         <div className={"navBardis" + this.state.loggedin}>
-          <NavBar data={this.state.data} />
+          <NavBar />
         </div>
       </div>)
   }

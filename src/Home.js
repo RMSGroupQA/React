@@ -10,11 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-        <br/>
-          <div className="calander">          
-		  <CustomTimeline/>
+        <CustomTimeline/>
           </div>
-        </div>
       </div>
     );
   }
