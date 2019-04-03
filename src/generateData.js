@@ -5,13 +5,16 @@ import axios from "axios"
 import React, { Component } from 'react';
 
 
-export default function (groupCount = 11, itemCount = 1, daysInPast = 30) 
+export default function (groupCount = 11, itemCount = 10, daysInPast = 30) 
 {
   let info = {bookingID:'1', room:"null", employee:"null", startTime:"2019-04-03T15:19:11.005Z", endTime:"2019-04-04T17:30:00.005Z", numberOfPeople:'1', title:"Test Name", description:"This is a desc"};
 
+
+  let i = 0
+
   axios.get('http://localhost:8081/getters/readBooking/' + 1)
   .then(response => {
-    // info = response.data;
+    info = response.data;
     console.log(info);
     console.log(info.bookingID);
     console.log(info.endTime);

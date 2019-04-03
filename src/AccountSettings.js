@@ -9,33 +9,14 @@ class App extends Component {
     super(props);
     this.state = {
 
-      email : 'Admin@qa.com',
       accountState: 1,
       bookingState: 0,
       usersState : 0,
     }
 
-
     this.accountPage = () => {
-      axios.get('http://52.142.151.160:8001/getters/readEmployee' + this.state.email).then(response => {
-        console.log(response.data);
-        this.setState({
-          data: response.data
-        });
-        let wordnice = JSON.stringify(response.data);
-        wordnice = wordnice.replace('[', " ");
-        wordnice = wordnice.replace(']', " ");
-        wordnice = wordnice.replace(/{/g, " <divdis>");
-        wordnice = wordnice.replace(/}/g, " </divdis> </br>");
-        wordnice = wordnice.replace(/\"/g, "");
-        wordnice = wordnice.replace(/,/g, "<br/>");
-
-        document.getElementById('testid').innerHTML = wordnice;
-      });
-    }
-
-    this.accountPage = () => {
-    this.setState({
+      console.log(this.props.data);
+      this.setState({
       accountState: 1,
       bookingState: 0,
     });
@@ -66,17 +47,7 @@ class App extends Component {
           </div>
 
           <div className={"vis" + this.state.accountState}>
-            <div id="testid">
-              Account Info
-          <br />
-              Email : AdminUser@qa.com
-          <br />
-              Forename : Admin
-          <br />
-              Surname : Admin
-          <br />
-              Password : *****
-          </div>
+          <p>{this.props.data}</p>
           </div>
           <div className={"vis" + this.state.bookingState}>
             Booking Info

@@ -70,16 +70,15 @@ class App extends Component {
           "password": this.state.password,
         })
           .then(response => {
-          this.setState({
-          errormessage: response.data,
-          });
-          console.log(response.data);
-          console.log(this.state.forename + ' ' + this.state.surname + ", you now have an account.")
-          if (response.data == this.state.forename + ' ' + this.state.surname + ", you now have an account.")
-          {
-            window.history.go(0);
-            console.log("LOGG IN")
-          }
+            this.setState({
+              errormessage: response.data,
+            });
+            console.log(response.data);
+            console.log(this.state.forename + ' ' + this.state.surname + ", you now have an account.")
+            if (response.data == this.state.forename + ' ' + this.state.surname + ", you now have an account.") {
+              window.history.go(0);
+              console.log("LOGG IN")
+            }
           });
       };
     }
@@ -128,19 +127,31 @@ class App extends Component {
     }
 
     this.changeToMain = () => {
-      axios.get('http://52.142.151.160:8001/getters/readEmployee' + this.state.email).then(response => {
+      axios.get(`http://localhost:8081/getters/readEmployee/${this.state.emaillogin}`).then(response => {
         console.log(response.data);
         this.setState({
           data: response.data
         });
-      });
-      if (this.state.data != "No such employee.")
-      {
-      this.setState({
-        loggedin: '1',
+
+        let wordnice = JSON.stringify(response.data);
+        wordnice = wordnice.replace('[', " ");
+        wordnice = wordnice.replace(']', " ");
+        wordnice = wordnice.replace(/\=/g, " : ");
+        wordnice = wordnice.replace(/\"/g, " ");
+        wordnice = wordnice.replace(/\,/g, "\n");
+        wordnice = wordnice.replace(/,/g, "<br/>");
+
+        this.setState({
+          data: response.data,
+        });
+        if (response.data != "No such employee.") {
+          this.setState({
+            data: wordnice + ".com",
+            loggedin: '1',
+          });
+        }
       });
     }
-  }
 
     this.signupPage = () => {
       console.log("signuppage");
@@ -151,11 +162,6 @@ class App extends Component {
     }
   }
 
-  // onChange = (e) => {
-  //   this.setState({
-  //   [event.target.id]:  event.target.value
-  // });
-  // }
 
   render() {
     return (
@@ -181,7 +187,11 @@ class App extends Component {
                 <br />
                 <button onClick={this.changeToMain}>
                   Login
-            </button>
+                  <br />
+                </button>
+                <br />
+                {this.state.data}
+                <br />
                 <br />
               </div>
 
@@ -209,7 +219,7 @@ class App extends Component {
           </div>
         </div>
         <div className={"navBardis" + this.state.loggedin}>
-          <NavBar />
+          <NavBar data={this.state.data} />
         </div>
       </div>)
   }
