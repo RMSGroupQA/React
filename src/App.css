@@ -1,0 +1,277 @@
+.App {
+  text-align: center;
+  align-items: center;
+}
+
+.logindis1 ,.navBardis0,.bookingForm0 ,.floorPlan1 ,.info0 ,.accountState0,
+.bookingState0 ,.vis0{ 
+  display: none;
+}
+
+.info250{
+  margin-top: 50px;
+  margin-left: 50px;
+  background-color: #61dafb;
+  border: #d86106;
+  border-style: ridge;
+}
+
+.bookingForm1
+{
+  text-align: center;
+  align-items: center;
+}
+
+.login1{
+  text-align: center;
+  align-items: center;
+}
+
+.imagecontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.content-expanded {
+  height: 10vh;
+  overflow: hidden;
+}
+
+.swapButton0{
+  background-color:  rgb(91, 155, 213);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2.7vmin);
+  width: 40vh;
+  color: whit
+}
+
+.swapButton1
+{
+  border: black;
+  border-style: ridge;
+  background-color: #d86106;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2.7vmin);
+  color: navy;
+  width: 45vh;
+  max-width: 40vh;
+}
+
+.loginButton0 
+{
+  background-color:  rgb(91, 155, 213);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2.7vmin);
+  width: 25vh;
+  color: white;
+}
+
+
+.loginButton1
+{
+  border: black;
+  border-style: ridge;
+  background-color: #d86106;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2.7vmin);
+  color: navy;
+  width: 25vh;
+  max-width: 40vh;
+}
+
+.login0 ,.signup0
+{
+  display: none;
+}
+
+.vis1{
+  text-align: center;
+  background-color: rgb(91, 155, 213);
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: white;
+  width: 80vh;
+}
+
+.login1 ,.signup1
+{ 
+  text-align: center;
+  background-color: rgb(91, 155, 213);
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: white;
+  width: 50vh;
+}
+
+h1{
+  color: black;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: navy;
+}
+
+.App-link {
+  color: black;
+}
+
+.topnav {
+  overflow-x: hidden;
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(61, 111, 201);
+}
+
+.topnav a 
+{
+  float: left;
+  color: #f2f2f2;
+  background-color: rgb(61, 111, 201);
+  text-align: center;
+  padding: 0px 0px;
+  font-size: 30px;
+  min-width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.topnav a:hover 
+{
+  background-color: rgb(61, 80, 201);
+  color: white;
+  min-width: 100px;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.topnav a.active 
+{
+  float: left;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #d86106;
+  color: black;
+  text-align: center;
+}
+
+input{
+  text-align: center;
+  background-color :#d1d1d1ff;
+  color: black;
+  border-bottom-width: 5px;
+  width: 40vh;
+}
+
+.buttonlargecontainer{
+  width: 100%;
+}
+.buttonlarge{
+  width: 30%;
+}
+
+.inputlarge{
+  text-align: center;
+  align-items: right;
+  background-color :#d1d1d1ff;
+  color: black;
+  border-bottom-width: 5px;
+  width: 30vh;
+  height: 20vh;
+}
+
+.logo { grid-area: logo;
+     background-color:rgb(61, 111, 201);
+}
+
+.header { grid-area: header;
+  background-color:rgb(61, 111, 201);
+  margin-left: 300px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  justify-content: center;
+}
+
+.calander {
+  background-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agenda{
+  width: 800px;
+}
+
+.menu { grid-area: menu;
+  background-color: rgb(61, 111, 201);
+  min-width: 10vh;
+}
+
+.main { grid-area: main;
+  background-color: white;
+  min-width: 150vh;
+  max-width: 200vh;
+  min-height: 70vh;
+}
+
+.profile { grid-area: logout;
+     background-color:rgb(61, 111, 201);
+}
+
+.padding { grid-area: padding;
+     background-color:rgb(61, 111, 201);
+     height: 4vh;
+}
+
+.paddingtest {
+  background-color:rgb(61, 111, 201);
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'padding padding padding padding padding padding padding padding'
+    'logo header header header header logout logout logout'
+    'menu main main main main main main main';
+	
+  grid-gap: 5px;
+  background-color: rgb(61, 111, 201);
+  padding: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 0px 0px;
+  font-size: 20px;
+}
