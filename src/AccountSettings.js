@@ -8,13 +8,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
+      email : 'Admin@qa.com',
       accountState: 1,
       bookingState: 0,
+      usersState : 0,
     }
 
 
     this.accountPage = () => {
-      axios.get('http://52.142.151.160:8001/getters/readEmployee' + this.props.email).then(response => {
+      axios.get('http://52.142.151.160:8001/getters/readEmployee' + this.state.email).then(response => {
         console.log(response.data);
         this.setState({
           data: response.data
@@ -66,13 +69,13 @@ class App extends Component {
             <div id="testid">
               Account Info
           <br />
-              Email : Example@qa.com
+              Email : AdminUser@qa.com
           <br />
-              Forename : Example
+              Forename : Admin
           <br />
-              Surname : Example
+              Surname : Admin
           <br />
-              Password : *******
+              Password : *****
           </div>
           </div>
           <div className={"vis" + this.state.bookingState}>

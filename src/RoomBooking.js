@@ -33,9 +33,25 @@ class App extends Component {
         "startTime": this.state.startDate,
         "endTime" :this.state.endDate,
         "title" : this.state.activName,
-        "description" : this.state.activDesc,
+        "description" : this.state.activDesc})
+        .then(response => {
+          console.log(response.data);
+          alert("Booking Made");
       })
     }
+
+    axios.get('http://52.142.151.160:8001/getters/readEmployee' + this.state.email).then(response => {
+      console.log(response.data);
+      this.setState({
+        data: response.data
+      });
+    });
+    if (this.state.data != "No such employee.")
+    {
+    this.setState({
+      loggedin: '1',
+    });
+  }
 
 
     this.setname = (e) => {
@@ -48,12 +64,7 @@ class App extends Component {
         activDesc : e.target.value
       });
     }
-
   }
-
-
-
-
 
   handleChange1(date) {
     console.log(date);
@@ -123,6 +134,10 @@ class App extends Component {
               Book Room
             </button>
             <br />
+            <div id="">
+
+            </div>
+
             <br />
           </div>
         </div>

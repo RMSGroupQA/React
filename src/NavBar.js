@@ -16,8 +16,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      forename: 'John',
-      surname: 'Richards',
+      forename: 'Admin',
+      surname: 'User',
       email: 'JohnRichards@qa.com',
     };
     this.rmsClick = () => {
@@ -53,7 +53,7 @@ class App extends Component {
                   </Link>
                 </button>
                 <button>
-                  <a href="/Home">Logout</a>
+                  <a href="/RoomsList">Logout</a>
                 </button>
               </div>
 

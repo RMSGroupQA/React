@@ -17,7 +17,7 @@ class App extends Component {
 
       email: '',
       emaillogin: '',
-      forname: '',
+      forename: '',
       surname: '',
       password: '',
       confimPassword: '',
@@ -39,9 +39,9 @@ class App extends Component {
           errormessage: 'Email Needs To End In .com',
         });
       }
-      else if (validator.isAlpha(this.state.forname) == false) {
+      else if (validator.isAlpha(this.state.forename) == false) {
         this.setState({
-          errormessage: 'Invalid Forname',
+          errormessage: 'Invalid forename',
         });
       }
       else if (validator.isAlpha(this.state.surname) == false) {
@@ -65,16 +65,21 @@ class App extends Component {
         });
         axios.post(`http://localhost:8081/getters/createEmployee`, {
           "email": this.state.email,
-          "forename": this.state.forname,
+          "forename": this.state.forename,
           "lastname": this.state.surname,
           "password": this.state.password,
         })
           .then(response => {
           this.setState({
-              errormessage: response.data,
+          errormessage: response.data,
           });
-            console.log(response.data);
-            console.log("Done");
+          console.log(response.data);
+          console.log(this.state.forename + ' ' + this.state.surname + ", you now have an account.")
+          if (response.data == this.state.forename + ' ' + this.state.surname + ", you now have an account.")
+          {
+            window.history.go(0);
+            console.log("LOGG IN")
+          }
           });
       };
     }
@@ -91,9 +96,9 @@ class App extends Component {
       });
     }
 
-    this.setForname = (e) => {
+    this.setforename = (e) => {
       this.setState({
-        forname: e.target.value
+        forename: e.target.value
       });
     }
     this.setSurname = (e) => {
@@ -146,6 +151,12 @@ class App extends Component {
     }
   }
 
+  // onChange = (e) => {
+  //   this.setState({
+  //   [event.target.id]:  event.target.value
+  // });
+  // }
+
   render() {
     return (
       <div>
@@ -176,9 +187,9 @@ class App extends Component {
 
               <div className={"signup" + this.state.signupState}>
                 Email
-            <input onChange={this.setEmail} placeholder="example@example.qa.com" />
+            <input id="email" onChange={this.setEmail} placeholder="example@example.qa.com" />
                 Forename
-            <input onChange={this.setForname} />
+            <input onChange={this.setforename} />
                 Surname
             <input onChange={this.setSurname} />
                 Password
