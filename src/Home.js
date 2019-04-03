@@ -3,16 +3,17 @@ import './App.css';
 import ImageMapper from 'react-image-mapper';
 import HomeTest from "./HomeTest";
 import CustomTimeline from "./CustomTimeline";
+import axios from "axios";
 
 class App extends Component {
-
+  
   render() {
     return (
       <div className="App">
         <div className="App-header">
         <br/>
           <div className="calander">          
-		  <CustomTimeline/>
+      <CustomTimeline/>
           </div>
         </div>
       </div>
