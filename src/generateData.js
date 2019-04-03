@@ -7,17 +7,14 @@ import React, { Component } from 'react';
 
 export default function (groupCount = 11, itemCount = 10, daysInPast = 30) 
 {
-  let info = {bookingID:'1', room:"null", employee:"null", startTime:"2019-04-03T15:19:11.005Z", endTime:"2019-04-04T17:30:00.005Z", numberOfPeople:'1', title:"Test Name", description:"This is a desc"};
+  let info = {bookingID:'1', room:"5", employee:"John", startTime:"2019-04-03T15:19:11.005Z", endTime:"2019-04-04T17:30:00.005Z", numberOfPeople:'1', title:"Test Name", description:"This is a desc"};
 
-
-  let i = 0
+  let i = 0;
 
   axios.get('http://localhost:8081/getters/readBooking/' + 1)
   .then(response => {
     info = response.data;
     console.log(info);
-    console.log(info.bookingID);
-    console.log(info.endTime);
   }); 
 
   let randomSeed = Math.floor(Math.random() * 1000)
@@ -26,7 +23,6 @@ export default function (groupCount = 11, itemCount = 10, daysInPast = 30)
     groups.push({
       id: `${i + 1}`,
       title: 'Room' + (i+1),
-      rightTitle: faker.name.lastName(),
       bgColor: randomColor({ luminosity: 'light', seed: randomSeed + i })
     })
   }
@@ -36,11 +32,11 @@ let now = new Date;
   let items = []
   for (let i = 0; i < itemCount; i++) {
 
-    const startDate = now
-    const bookingTitle = info.employee + ' ' +  info.title
-    const groupname = "7" 
-    const startValue = new Date(info.startTime)
-    const endValue = new Date(info.endTime)
+    let startDate = now
+    let bookingTitle = info.title
+    let groupname = info.room
+    let startValue = new Date(info.startTime)
+    let endValue = new Date(info.endTime)
     
     items.push({
       id: i + '',

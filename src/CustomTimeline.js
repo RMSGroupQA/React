@@ -3,7 +3,7 @@ import moment from "moment";
 
 import Timeline from "react-calendar-timeline";
 
-import generateFakeData from "./generate-fake-data";
+import generateData from "./generateData";
 
 
 var keys = {
@@ -23,7 +23,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    const { groups, items } = generateFakeData();
+    const { groups, items } = generateData();
 
     items.forEach(item => {
       const { start, end } = item;

@@ -16,8 +16,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      forename: 'John',
-      surname: 'Richards',
+      forename: '',
+      surname: 'User',
       email: 'JohnRichards@qa.com',
     };
     this.rmsClick = () => {
@@ -30,7 +30,6 @@ class App extends Component {
         <div className="App">
           <div >
             <div className="grid-container">
-
               <div className="padding">
               </div>
               <br />
@@ -53,16 +52,18 @@ class App extends Component {
                   </Link>
                 </button>
                 <button>
-                  <a href="/Home">Logout</a>
+                  <a href="/RoomsList">Logout</a>
                 </button>
               </div>
 
               <div className="main">
                 <Route exact path="/Home" component={Home} />
+                <Route exact path={"/" + this.state.forename + this.state.surname + '_account_settings'}
+                render={()=>
+                <AccountSettings data={this.props.data}/>} />
                 <Route exact path="/RoomsList" component={RoomList} />
                 <Route exact path="/Floor4" component={FloorPlan4} floornumber='4' />
                 <Route exact path="/Floor5" component={FloorPlan5} floornumber='5' />
-                <Route exact path={"/" + this.state.forename + this.state.surname + '_account_settings'} forename={this.state.forename} surname={this.state.surname} email={this.state.email} component={AccountSettings} />
               </div>
 
               <div className="menu">
