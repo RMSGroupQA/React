@@ -27,7 +27,7 @@ class App extends Component {
       console.log(this.state.startDate);
       console.log(this.state.endDate)
 
-      axios.post(`http://localhost:8081/getters/createBooking`, {
+      axios.post(`http://51.141.6.150:8081/createBooking`, {
         "roomID" : this.props.roomName,
         "email": this.state.email,
         "startTime": this.state.startDate,

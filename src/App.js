@@ -63,7 +63,7 @@ class App extends Component {
         this.setState({
           errormessage: '',
         });
-        axios.post(`http://localhost:8081/getters/createEmployee`, {
+        axios.post(`http://51.141.6.150:8081/createEmployee`, {
           "email": this.state.email,
           "forename": this.state.forename,
           "lastname": this.state.surname,
@@ -127,7 +127,7 @@ class App extends Component {
     }
 
     this.changeToMain = () => {
-      axios.get(`http://localhost:8081/getters/readEmployee/${this.state.emaillogin}`).then(response => {
+      axios.get(`http://51.141.6.150:8081/readEmployee/${this.state.emaillogin}`).then(response => {
         console.log(response.data);
         this.setState({
           data: response.data

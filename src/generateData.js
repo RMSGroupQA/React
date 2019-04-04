@@ -22,7 +22,7 @@ export default function (groupCount = 11) {
 
 
   for (let i = 1; i < 5; i++) {
-  axios.get(`http://localhost:8082/readBooking/${i}`)
+  axios.get(`http://51.141.6.150:8081/readBooking/${i}`)
     .then(response => {
       info = response.data;
       console.log(info);
