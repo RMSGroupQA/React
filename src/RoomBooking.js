@@ -36,7 +36,7 @@ class App extends Component {
         "description" : this.state.activDesc})
         .then(response => {
           console.log(response.data);
-          alert("Booking Made");
+          alert(response.data);
       })
     }
 
