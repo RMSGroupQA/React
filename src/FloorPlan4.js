@@ -65,8 +65,7 @@ class App extends Component {
       <div className="App">
 
         <div className={"floorPlan" + this.state.roomBookingVis}>
-          <p>Welcome</p>
-          This Is The Page For Floor 4
+          <p>Welcome</p>To Floor 4
           {this.props.floornumber}
           <div className="imagecontainer">
             <ImageMapper src={Floor_4} map={MAP} width={1000}

@@ -230,7 +230,7 @@ input{
 }
 
 .react-calendar-timeline{
-    min-width: 30vw;
+    width: 70vw;
     
 }
 
@@ -245,7 +245,7 @@ input{
 
 .main { grid-area: main;
   background-color: white;
-  min-width: 80vw;
+  min-width: 30vw;
 
   min-height: 70vh;
 }

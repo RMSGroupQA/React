@@ -17,21 +17,39 @@ class App extends Component {
       endDate: new Date(),
       roomName: '',
       email: '',
-      activName: 'Example Name',
-      activDesc: 'Example Description',
+      activName: '',
+      activDesc: '',
     };
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
 
     this.saveBooking = () => {
-      axios.post(`http://51.141.6.150:8081/createBooking`, {
-        "room" : this.props.roomName,
+      console.log(this.state.startDate);
+      console.log(this.state.endDate)
+
+      axios.post(`http://localhost:8081/getters/createBooking`, {
+        "roomID" : this.props.roomName,
         "email": this.state.email,
-        "starttime": this.state.startDate,
-        "endtime" :this.state.endDate,
-        "activName" : this.state.activName,
-        "activDesc" : this.state.activDesc,
+        "startTime": this.state.startDate,
+        "endTime" :this.state.endDate,
+        "title" : this.state.activName,
+        "description" : this.state.activDesc})
+        .then(response => {
+          console.log(response.data);
+          alert(response.data);
       })
+    }
+
+
+    this.setname = (e) => {
+      this.setState({
+        activName : e.target.value
+      });
+    }
+    this.setdesc = (e) => {
+      this.setState({
+        activDesc : e.target.value
+      });
     }
   }
 
@@ -64,7 +82,7 @@ class App extends Component {
             <br />
             <input readOnly type={Text} placeholder="Room Name" defaultValue={this.props.roomname} />
             <br />
-            <input id="activName" placeholder="Activity Name" />
+            <input id="activName" placeholder="Activity Name" onChange={this.setname}/>
             <br />
             Start Time
         <br />
@@ -83,9 +101,6 @@ class App extends Component {
             End Time
         <br />
             <DatePicker
-
-              placeholderText="test"
-              placeholder="Test"
               selected={this.state.endDate}
               onChange={this.handleChange2}
               showTimeSelect
@@ -100,12 +115,16 @@ class App extends Component {
             />
             <br />
             <br />
-            <textarea type={Text} className="inputlarge" placeholder="Activity Desc" />
+            <textarea type={Text} className="inputlarge" placeholder="Activity Desc" onChange={this.setdesc}/>
             <br />
             <button onClick={this.saveBooking}>
               Book Room
             </button>
             <br />
+            <div id="">
+
+            </div>
+
             <br />
           </div>
         </div>

@@ -12,7 +12,7 @@ class App extends Component {
         <div className="App-header">
         <br/>
           <div className="calander">          
-		  <CustomTimeline/>
+      <CustomTimeline/>
           </div>
         </div>
       </div>

@@ -22,6 +22,7 @@ var keys = {
 export default class App extends Component {
   constructor(props) {
     super(props);
+    
 
     const { groups, items } = generateData();
 
@@ -34,8 +35,8 @@ export default class App extends Component {
             ? "both"
             : "left"
           : end > new Date().getTime()
-          ? "right"
-          : false;
+            ? "right"
+            : false;
     });
 
     const defaultTimeStart = moment()
@@ -63,10 +64,10 @@ export default class App extends Component {
       items: items.map(item =>
         item.id === itemId
           ? Object.assign({}, item, {
-              start: dragTime,
-              end: dragTime + (item.end - item.start),
-              group: group.id
-            })
+            start: dragTime,
+            end: dragTime + (item.end - item.start),
+            group: group.id
+          })
           : item
       )
     });
@@ -81,9 +82,9 @@ export default class App extends Component {
       items: items.map(item =>
         item.id === itemId
           ? Object.assign({}, item, {
-              start: edge === "left" ? time : item.start,
-              end: edge === "left" ? item.end : time
-            })
+            start: edge === "left" ? time : item.start,
+            end: edge === "left" ? item.end : time
+          })
           : item
       )
     });
