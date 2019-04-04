@@ -11,7 +11,7 @@ class App extends Component {
     }
 
     this.getall = () => {
-      axios.get('http://51.141.6.150/getAllRooms').then(response => {
+      axios.get('http://51.141.6.150:8081/getAllRooms').then(response => {
         console.log(response.data);
         this.setState({
           data: response.data

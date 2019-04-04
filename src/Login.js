@@ -55,7 +55,7 @@ class App extends Component {
         this.setState({
           errormessage: '',
         });
-        axios.post(`http://51.141.6.150/createEmployee`, {
+        axios.post(`http://51.141.6.150:8081/createEmployee`, {
           "email": this.state.email,
           "forename": this.state.forname,
           "lastname": this.state.surname,
