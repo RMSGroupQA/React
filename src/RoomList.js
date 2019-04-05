@@ -33,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div className="App-header">
         <br /><br />
         <button onClick={this.getall}>
           Show All Rooms
@@ -46,7 +47,6 @@ class App extends Component {
         <p>
           Floor 4 Room 2 Number Of Chairs : 20 Number Of Computers : 48
         </p>
-
         <p>
           Floor 5 Room M1 Number Of Chairs : 31 Number Of Computers : 23
         </p>
@@ -54,6 +54,7 @@ class App extends Component {
           Floor 4 Room 4 Number Of Chairs : 16 Number Of Computers : 21
         </p>
         <br /><br />
+      </div>
       </div>
     );
   }

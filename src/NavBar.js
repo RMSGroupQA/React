@@ -71,11 +71,6 @@ class App extends Component {
               <div className="menu">
                 <div className="topnav">
                   <h3>
-                    <NavLink to="/Home">Home</NavLink>
-                  </h3>
-                  <br/>
-                  <br/>
-                  <h3>
                     <NavLink to="/Floor4">Floor 4</NavLink>
                   </h3>
                   <br />

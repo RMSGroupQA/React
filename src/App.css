@@ -4,7 +4,7 @@
 }
 
 .logindis1 ,.navBardis0,.bookingForm0 ,.floorPlan1 ,.info0 ,.accountState0,
-.bookingState0 ,.vis0{ 
+.bookingState0 ,.vis0 , .adminvis0{ 
   display: none;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .imagecontainer {
+  z-index: -5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,6 +108,19 @@
   width: 80vh;
 }
 
+.adminvis1{
+  text-align: center;
+  background-color: rgb(91, 155, 213);
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: white;
+  width: 120vh;
+}
+
 .login1 ,.signup1
 { 
   text-align: center;
@@ -142,7 +156,7 @@ h1{
 
 .topnav {
   overflow-x: hidden;
-  z-index: 1;
+  z-index: 10;
   margin: 0px;
   padding: 0px;
   background-color: rgb(61, 111, 201);
@@ -246,8 +260,8 @@ input{
 .main { grid-area: main;
   background-color: white;
   min-width: 30vw;
-
   min-height: 70vh;
+  width: 80vw;
 }
 
 .profile { grid-area: logout;
@@ -259,10 +273,10 @@ input{
      height: 4vh;
 }
 
-.paddingtest {
+.formpadding {
   background-color:rgb(61, 111, 201);
-  margin-left: 20vh;
-  margin-right: 20vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 .grid-container {

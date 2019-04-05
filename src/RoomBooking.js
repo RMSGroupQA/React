@@ -71,13 +71,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="app-header">
+        <div className="App-header">
           <br />
           <div className="bookingtitle">
             Booking Form
             </div>
           <br />
-          <div className="paddingtest">
+          <div className="formpadding">
             <input readOnly placeholder="Email" defaultValue={this.props.email} />
             <br />
             <input readOnly type={Text} placeholder="Room Name" defaultValue={this.props.roomname} />

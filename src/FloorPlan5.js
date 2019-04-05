@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ImageMapper from 'react-image-mapper';
-import Floor_52 from "./Floor_52.PNG";
+import Floor_5 from "./Floor_5.PNG";
 import RoomBooking from "./RoomBooking";
 
 class App extends Component {
@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       floornumber: '',
 
-
       infosize: '0',
 
       email: 'Example@qa.com',
@@ -19,15 +18,48 @@ class App extends Component {
       numberOfSeats: '',
       numberOfComputer: '',
 
-      activName: '',
-
       roomBookingVis: '0',
+
+      imagesize : 750,
     };
 
     this.clicked = (e) => {
       this.setState({
         roomname: e.name,
         roomBookingVis: '1',
+      });
+    }
+    this.reduceArea = (e) => {
+      this.setState({
+        imagesize: this.state.imagesize - 50,
+      });
+    }
+
+    this.smallArea = (e) => {
+      this.setState({
+        imagesize: 500,
+      });
+    }
+    this.mediumArea = (e) => {
+      this.setState({
+        imagesize : 750,
+      });
+    }
+    this.largeArea = (e) => {
+      this.setState({
+        imagesize : 1000,
+      });
+    }
+
+    this.leaveArea = (e) => {
+      this.setState({
+        infosize: 0,
+      });
+    }
+
+    this.enlargeArea = (e) => {
+      this.setState({
+        imagesize: this.state.imagesize + 50,
       });
     }
 
@@ -68,12 +100,29 @@ class App extends Component {
     }
     return (
       <div className="App">
-
+<div className="App-header">
         <div className={"floorPlan" + this.state.roomBookingVis}>
           <p>Welcome</p>To Floor 5
-          {this.props.floornumber}
+          <br/>
+          Change Floor View 
+          <br/>
+          <button onClick={this.reduceArea}>
+            Reduce
+          </button>
+          <button onClick={this.smallArea}>
+            Small
+          </button>
+          <button onClick={this.mediumArea}>
+            Medium
+          </button>
+          <button onClick={this.largeArea}>
+            Large
+          </button>
+          <button onClick={this.enlargeArea}>
+            Enlarge
+          </button>
           <div className="imagecontainer">
-            <ImageMapper src={Floor_52} map={MAP} width={1000}
+            <ImageMapper src={Floor_5} map={MAP} width={this.state.imagesize} imgWidth={1000}
               onClick={area => this.clicked(area)}
               onMouseEnter={area => this.enterArea(area)}
               onMouseLeave={area => this.leaveArea(area)}
@@ -105,6 +154,7 @@ class App extends Component {
             </button>
           <RoomBooking activName={this.state.activName} email={this.state.email} roomname={this.state.roomname} />
         </div>
+      </div>
       </div>
     );
   }

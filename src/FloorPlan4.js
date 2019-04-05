@@ -13,6 +13,8 @@ class App extends Component {
 
       infosize: '0',
 
+      imagesize: 750,
+
       email: 'Example@qa.com',
       roomname: '',
       numberOfSeats: '',
@@ -38,9 +40,37 @@ class App extends Component {
       });
     }
 
+    this.reduceArea = (e) => {
+      this.setState({
+        imagesize: this.state.imagesize - 50,
+      });
+    }
+
+    this.smallArea = (e) => {
+      this.setState({
+        imagesize: 500,
+      });
+    }
+    this.mediumArea = (e) => {
+      this.setState({
+        imagesize : 750,
+      });
+    }
+    this.largeArea = (e) => {
+      this.setState({
+        imagesize : 1000,
+      });
+    }
+
     this.leaveArea = (e) => {
       this.setState({
         infosize: 0,
+      });
+    }
+
+    this.enlargeArea = (e) => {
+      this.setState({
+        imagesize: this.state.imagesize + 50,
       });
     }
 
@@ -63,12 +93,29 @@ class App extends Component {
     }
     return (
       <div className="App">
-
+<div className="App-header">
         <div className={"floorPlan" + this.state.roomBookingVis}>
           <p>Welcome</p>To Floor 4
-          {this.props.floornumber}
+          <br/>
+          Change Floor View 
+          <br/>
+          <button onClick={this.reduceArea}>
+            Reduce
+          </button>
+          <button onClick={this.smallArea}>
+            Small
+          </button>
+          <button onClick={this.mediumArea}>
+            Medium
+          </button>
+          <button onClick={this.largeArea}>
+            Large
+          </button>
+          <button onClick={this.enlargeArea}>
+            Enlarge
+          </button>
           <div className="imagecontainer">
-            <ImageMapper src={Floor_4} map={MAP} width={1000}
+            <ImageMapper src={Floor_4} map={MAP} width={this.state.imagesize} imgWidth={1000}
               onClick={area => this.clicked(area)}
               onMouseEnter={area => this.enterArea(area)}
               onMouseLeave={area => this.leaveArea(area)}
@@ -99,6 +146,7 @@ class App extends Component {
             </button>
           <RoomBooking activName={this.state.activName} email={this.state.email} roomname={this.state.roomname} />
         </div>
+      </div>
       </div>
     );
   }

@@ -13,7 +13,7 @@ class App extends Component {
 
       data: '',
 
-      loggedin: '0',
+      loggedin: '1',
 
       email: '',
       emaillogin: '',
